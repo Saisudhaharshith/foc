@@ -1,0 +1,267 @@
+C Program to read a number and find its square.cpp
+
+
+#include<stdio.h>
+int main()
+{
+	int num,square;
+	printf("enter a number to be converted into square:");
+	scanf("%d",&num);
+
+	square = (num*num);
+	{
+		printf("%d square is",num,square);
+	}
+	return 0;
+}
+ 
+Program to convert decimal to octal.cpp
+
+#include <stdio.h>
+int main()
+{
+    long decimalnum, remainder, quotient,octalnum=0;
+    int octalNumber[100], i = 1, j;
+
+    printf("Enter the decimal number: ");
+    scanf("%ld", &decimalnum);
+    quotient = decimalnum;
+    while (quotient != 0)
+    {
+        octalNumber[i++] = quotient % 8;
+        quotient = quotient / 8;
+    }
+    for (j = i - 1; j > 0; j--)
+        octalnum = octalnum*10 + octalNumber[j];
+    printf("Equivalent octal value of decimal no %d is: %d  ", decimalnum,octalnum);
+    return 0;
+}
+
+
+area of different shapes.cpp
+
+#include<stdio.h>
+#include<math.h>
+main(){
+   int choice;
+   printf("Enter\n1 to find area of Triangle\n2 for finding area of Square\n3 for finding area of Circle\n4 for finding area of Rectangle\n5 for Parallelogram\n");
+   scanf("%d",&choice);
+   switch(choice) {
+      case 1: {
+         int a,b,c;
+         float s,area;
+         printf("Enter sides of triangle\n");
+         scanf("%d%d %d",&a,&b,&c);
+         s=(float)(a+b+c)/2;
+         area=(float)(sqrt(s*(s-a)*(s-b)*(s-c)));
+         printf("Area of Triangle is %f\n",area);
+         break;
+      }
+      case 2: {
+         float side,area;
+         printf("Enter Sides of Square\n");
+         scanf("%f",&side);
+         area=(float)side*side;
+         printf("Area of Square is %f\n",area);
+         break;
+      }
+      case 3: {
+         float radius,area;
+         printf("Enter Radius of Circle\n");
+         scanf("%f",&radius);
+         area=(float)3.14159*radius*radius;
+         printf("Area of Circle %f\n",area);
+         break;
+      }
+      case 4: {
+         float len,breadth,area;
+         printf("Enter Length and Breadth of Rectangle\n");
+         scanf("%f %f",&len,&breadth);
+         area=(float)len*breadth;
+         printf("Area of Rectangle is %f\n",area);
+         break;
+      }
+      case 5: {
+         float base,height,area;
+         printf("Enter base and height of Parallelogram\n");
+         scanf("%f %f",&base,&height);
+         area=(float)base*height;
+         printf("Enter area of Parallelogram is %f\n",area);
+         break;
+      }
+      default: {
+         printf("Invalid Choice\n");
+         break;
+      }
+   }
+}
+ 
+arthametic operations.cpp
+
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("enter 1st number:");
+	scanf("%d",&a);
+	printf("enter 2nd number:");
+	scanf("%d",&b);
+
+	c = (a+b);
+	{
+		printf("sum is %d\n",c);
+	}
+
+	c = (a-b);
+	{
+		printf("sub is %d\n",c);
+	}
+
+	c = (a*b);
+	{
+		printf("mul is %d\n",c);
+	}
+	c = (a/b);
+	{
+		printf("divd is %d\n",c);	
+	}
+	c = (a%b);
+	{
+		printf("rem is %d\n",c);
+	}
+	return 0;
+
+
+}
+ 
+largest number among three.cpp
+
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("enter 1st number:");
+	scanf("%d",&a);
+	printf("enter 2nd number:");
+	scanf("%d",&b);
+	printf("enter 3rd number:");
+	scanf("%d",&c);
+
+	if (a>b & a>c)
+	{
+		printf("%d is largest number",a);
+	}
+	else if (b>a & b>c)
+	{
+		printf("%d is largest number",b);
+	}
+	else
+	{
+		printf("%d is largest number",c);
+	}
+	return 0;
+}
+ 17  
+leap year2.cpp
+
+#include<stdio.h>
+int main()
+{
+	int year;
+	printf("enter the year:");
+	scanf("%d",&year);
+	if (year % 4 == 0 || year % 400 == 0)
+	{
+		printf("%d is a leap year",year);
+    }
+	else
+	{
+		printf("%d is not a leap year",year);
+
+	}
+	return 0;
+}
+ 
+n natural numbers.cpp
+
+#include <stdio.h>
+
+int main()
+{
+    int i, n;
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    printf("Natural numbers from 1 to %d : \n", n);
+    for(i=1; i<=n; i++)
+    {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+ 
+octal to decimal.cpp
+
+#include<stdio.h>
+#include<math.h>
+int OctalToDecimal(int n) {
+    int p = 0, decimal = 0, r;
+
+    while(n>0){
+        r = n % 10;
+        n = n / 10;
+
+        decimal = decimal + r * pow( 8 , p );    
+        ++p;
+
+    }
+
+    return decimal;
+}
+int main() {
+    int n, i, k;
+    printf("Enter Octal: ");
+    scanf("%d", &n);
+    printf("\nDecimal of Octal Number %d is : %d", n, OctalToDecimal(n));
+    return 0;
+}
+ 
+palindrome.cpp
+
+#include<stdio.h>  
+int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=(sum*10)+r;    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("palindrome number ");    
+else    
+printf("not palindrome");   
+return 0;  
+}
+   
+square of a number.cpp
+
+
+#include<stdio.h>
+int main()
+{
+	int num,square;
+	printf("enter a number to be converted into square:");
+	scanf("%d",&num);
+
+	square = (num*num);
+	{
+		printf("square of given number is %d",square);
+	}
+	return 0;
+}
